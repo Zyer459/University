@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block body %}
+  	{% for item in results %}
+  		{% if item != None %}
+        <p>name: {{item[1]}}, price: tk {{item[2]}}</p>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

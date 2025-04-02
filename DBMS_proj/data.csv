@@ -1,0 +1,160 @@
+1,fungal culture,300
+2,p/s gm. Stain (gc),300
+3,v.swab for AFB,300
+4,p/s for cytology,300
+5,throat for c/s,500
+6,aural swab r/e m/e,300
+7,sputum fungus for c/s,600
+8,skin for scr.fungus for c/s,700
+9,fluid c/s for anarobic,1400
+10,csf for afb c/s,700
+11,csf for anarobic c/s,700
+12,HLA-B27 (not diab),4000
+13,PCR MTB DNA,6000
+14,ASO TIRE,6000
+15,C3,600
+16,C4,1000
+17,CRP,1000
+18,CSF TPHA (Q+Q),600
+19,FEBRILE/TRIPLE antigen,750
+20,HBsAg (ICT),900
+21,HBsAg (RPHA),600
+22,HBsAg latex,500
+23,HIV (R),350
+24,ICT FILARIA,400
+25,ICT FOR T.B,900
+26,ICT Kala Azar,900
+27,ICT malaria,800
+28,Ige serum,900
+29,R/A test,950
+30,Rose waaler test,600
+31,serum screening test,400
+32,TPHA,1500
+33,TPHA (Q+Q),700
+34,Urine P.t,750
+35,VDRL,250
+36,Widal test,500
+37,Anti-HCV (ICT),450
+38,HCG for urine,1000
+39,FIBRONECTIN,250
+40,SKIN scrapping M/E,800
+41,COOMB's direct,300
+42,Prealbumin,600
+43,Albumin (serum),1000
+44,ALDOLASE,300
+45,Alkaline phosphate (ALP),1100
+46,AMYLASE,300
+47,Fasting (FBS),1100
+48,B.Sugar Random (RBS),200
+49,B/s 1.5 hrs.ABF,200
+50,B/s 1.5 hrs.SHRS 50gm Glucose,200
+51,B/s 2hrs.ABF,200
+52,2hrs.AL,200
+53,BILIRUBIN (total),200
+54,calcium,300
+55,Cholestrol,500
+56,CK-MB (creatine kinase),300
+57,Co2,1000
+58,CPK,300
+59,Creatine,800
+60,CSF albumin,400
+61,CSF CL (cloride),300
+62,CSF LDH,300
+63,eGFR,800
+64,ELECTROLYTES,800
+65,endometrial LDH,850
+66,gamma gt (GGT),800
+67,GFR,800
+68,Glibulin,1000
+69,HbA1C,600
+70,Iron,1200
+71,LDH,350
+72,LDL,1200
+73,Lipid profile fasting,800
+74,Lithium,400
+75,Liver function test (LFT),700
+76,magnesium,1000
+77,NA+,900
+78,Pancreatic amylase,250
+79,pancreatic lipase,900
+80,S.total protien,800
+81,serum lipase,450
+82,Digoxin,1000
+83,estradiol,1000
+84,ferritin,1000
+85,FSH,1000
+86,FT3,1700
+87,FT3+FT4,100
+88,FT4,2000
+89,H. pylori IgG,1000
+90,HBeAg,1000
+91,HBsAb,1050
+92,anti hev,1050
+93,HIV (e),1000
+94,homocysteine,1100
+95,LH (luteinizing hormone),2400
+96,Oestrogen,1000
+97,P-anca,1000
+98,Phenobarbitol,1100
+99,prolactin,1000
+100,PSA,1000
+101,Rubella virus antibody IgG,1000
+102,Rubella virus antibody IgM,1000
+103,serum oestrogen,1000
+104,T3,800
+105,T3 T4 TSH,2400
+106,T4,800
+107,TB-IgA,1000
+108,TB-IgA.IgM.IgG,3000
+109,TB-IgG,1000
+110,TB-IgM,1000
+111,Testosterone,1000
+112,Torch,8000
+113,Troponin-I,1000
+114,TSH,800
+115,Urine cortisol 24 hrs,1000
+116,Valporic acid,1200
+117,vitamin b12,2100
+118,vitamin D (25-OH),3000
+119,Monospot test (not in dlab),600
+120,Cyclosporin,2200
+121,Hb.Glycated,1050
+122,alcohol test,1000
+123,myoglobin,1100
+124,PTH,1100
+125,Growth hormone,2000
+126,LH FSH ratio,2000
+127,Synacthen test,1000
+128,cortisol (random),3000
+129,Basal cortisol (random),9000
+130,AMH,2400
+131,Multiple allergens,1500
+132,Anti phospholipid Ab,1100
+133,anti cardiolipin IgG,1200
+134,Anti TPO AB,2000
+135,Free testosterone,1200
+136,anti cardiolipin IgM,1500
+137,procalcitonin,2000
+138,ENAprofile,7000
+139,Unine cortisol Spot,1000
+140,HBsAg (confirmatory),1600
+141,Syphilis Ab,700
+142,Covid-19 antigen test,700
+143,Thyroglobulin (TG),1000
+144,serum calcitonin,2000
+145,HEV IgM,1200
+146,TB-gold,8000
+147,SHBG,1500
+148,Ascitic Fluid malig.cel,800
+149,paps smear,800
+150,malignent cell,600
+151,p/s for malignent cell,600
+152,pericardial FL.Malig.cell,600
+153,Peritoneal FL.Malig.cell,600
+154,Sputum cytology,700
+155,Urine cytology,700
+156,Sputum malignant cell,700
+157,CSF malignant cell,600
+158,histopath (2),2000
+159,Synovial fluid Malig.cell,700
+160,Tracheal Aspirate Malig.cell,600
