@@ -5,3 +5,6 @@ CREATE TABLE data ( sl int, name varchar(255), price int, PRIMARY KEY (sl) );
 
 CREATE TABLE users ( id int AUTO_INCREMENT, email varchar(255), pass varchar(255), PRIMARY KEY (id) );
 INSERT INTO users (email, pass) VALUES ('test@gmail.com', '123');
+
+make sure python, pip, venv are installed
+run the project in venv
