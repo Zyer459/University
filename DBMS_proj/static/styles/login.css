@@ -4,3 +4,15 @@ body{
             background-repeat: no-repeat;
             background-color: rgb(0, 0, 0,0.5);
         }
+
+.back{
+    background-image: url(../images/resource-25-most-common-diagnosis.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.wlcom{
+    background-image: url(../images/Stroke-Diagnosis-MRI.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

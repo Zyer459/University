@@ -19,3 +19,11 @@ def verify_user(email, password):
 	else:
 		#print(results)
 		return results
+
+def reg_user(name, email, mobile, password):
+	cursor = db.cursor()
+	sql = 'INSERT INTO users (name, email, mobile, pass) VALUES (%s, %s, %s, %s)'
+	values = [name, email, mobile, password]
+	cursor.execute(sql, values)
+	db.commit()
+	cursor.close()

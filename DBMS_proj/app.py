@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template, jsonify, redirect, session, url_for
 import mysql.connector
-from verify import verify_user
+from verify import verify_user, reg_user
 
 db = mysql.connector.connect(
 	host = 'localhost',
@@ -35,6 +35,22 @@ def login():
 			return jsonify({'result': '404'})
 	else:
 		return render_template('login.html')
+
+@app.route('/register', methods=['POST'])
+def register():
+	#request.method == 'POST':
+	data = request.get_json()
+	email = data['email']
+	name = data['name']
+	mobile = data['mobile']
+	print(type(data['password']))
+	print(data['password'])
+	password = int(data['password'])
+	#registration
+	reg_user(name, email, mobile, password)
+	if verify_user(email,password) is None:
+		return jsonify({'result': '404'})
+	return jsonify({'result': '200', 'redirect':'/login'})
 
 @app.route('/logout')
 def logout():

@@ -8,75 +8,112 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="shortcut icon" href="{{ url_for('static' ,filename='images/diagnosis.jpg') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for('static',filename='styles/login.css') }}">
 </head>
 
-<body class="min-h-screen">
-    <nav class="navbar fixed bg-green-500">
-        <div class="navbar-start">
-            <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h8m-8 6h16" />
-                    </svg>
+<body>
+    <section class="min-h-screen welcome">
+        <nav class="navbar fixed bg-black justify-between">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="white">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm text-white dropdown-content bg-slate-500 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li>
+                            <a>Appointment</a>
+                            <ul class="p-2  bg-slate-500">
+                                <li><a>Doctor</a></li>
+                                <li><a>Diagnosis</a></li>
+                            </ul>
+                        </li>
+                        <li><a>About Us</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
                 </div>
-                <ul tabindex="0"
-                    class="menu menu-sm text-white dropdown-content bg-green-500 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                <a class="btn btn-ghost text-xl text-white font-bold">D.A.S</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
                     <li>
-                        <a>Appointment</a>
-                        <ul class="p-2  bg-green-500">
-                            <li><a>Doctor</a></li>
-                            <li><a>Diagnosis</a></li>
-                        </ul>
+                        <details>
+                            <summary class="text-white font-bold">Appointment</summary>
+                            <ul class="p-2">
+                                <li><a class="font-semibold">Doctor</a></li>
+                                <li><a class="font-semibold">Diagnosis</a></li>
+                            </ul>
+                        </details>
                     </li>
-                    <li><a>About Us</a></li>
-                    <li><a>Contact</a></li>
+                    <li><a class="text-white font-bold">About Us</a></li>
+                    <li><a class="text-white font-bold">Contact</a></li>
                 </ul>
             </div>
-            <a class="btn btn-ghost text-xl text-black font-bold">D.A.S</a>
-        </div>
-        <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1">
-                <li>
-                    <details>
-                        <summary class="text-black font-bold">Appointment</summary>
-                        <ul class="p-2 bg-green-500">
-                            <li><a>Doctor</a></li>
-                            <li><a>Diagnosis</a></li>
-                        </ul>
-                    </details>
-                </li>
-                <li><a class="text-black font-bold">About Us</a></li>
-                <li><a class="text-black font-bold">Contact</a></li>
-            </ul>
-        </div>
-        <div class="navbar-end">
-            <a class="btn rounded-full text-black font-bold">DP</a>
-        </div>
-    </nav>
+            <div id="log_in" class="navbar-end gap-2">
+                <a class="btn rounded-full text-black font-bold" onclick="signUp()">Sign up</a>
+                <a class="btn rounded-full text-black font-bold" onclick="logIn()">Log in</a>
+            </div>
+        </nav>
 
-    <div class="hero bg-transparent min-h-screen">
-        <div class="hero-content flex-col lg:flex-row-reverse">
-          <div class="card bg-base-100 w-96 shrink-0 shadow-2xl">
-            <div class="card-body">
-              <fieldset class="fieldset">
-                <label class="fieldset-label">Email</label>
-                <input id="email" type="email" class="input" placeholder="Email" />
-                <label class="fieldset-label">Password</label>
-                <input id="password" type="password" class="input" placeholder="Password" />
-                <div><a class="link link-hover">Forgot password?</a></div>
-                <button class="btn btn-neutral mt-4" onclick="login()">Login</button>
-              </fieldset>
+
+        <div id="wlcm" class="min-h-screen flex justify-center items-center bg-slate-400 wlcom">
+            <h1 class="text-4xl lg:text-9xl text-center text-black font-bold lg:font-extrabold bg-slate-100 pb-10 opacity-80">Welcome To Diagnosis and Appointment System</h1>
+        </div>
+
+
+
+        <!-- Login Section -->
+       <section id="login" class="login-section back">
+        <div class="hero bg-transparent min-h-screen">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+              <div class="card bg-base-100 w-96 shrink-0 shadow-2xl">
+                <div class="card-body">
+                  <fieldset class="fieldset">
+                    <label class="fieldset-label">Email</label>
+                    <input id="email" type="email" class="input" placeholder="Email" />
+                    <label class="fieldset-label">Password</label>
+                    <input id="password" type="password" class="input" placeholder="Password" />
+                    <div><a class="link link-hover">Forgot password?</a></div>
+                    <button class="btn btn-neutral mt-4" onclick="login()">Login</button>
+                  </fieldset>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <script src="{{url_for ('static', filename='js/login.js')}}"></script>
+       </section>
+
+       <!-- Sign Up Section -->
+       <section id="signup" class="signup-section back">
+        <div class="hero bg-transparent min-h-screen">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+              <div class="card bg-base-100 w-96 shrink-0 shadow-2xl">
+                <div class="card-body">
+                  <fieldset class="fieldset">
+                    <label class="fieldset-label">Email</label>
+                    <input id="regemail" type="email" class="input" placeholder="Email" />
+                    <label class="fieldset-label">Name</label>
+                    <input id="name" type="text" class="input" placeholder="Name" />
+                    <label class="fieldset-label">Mobile No.</label>
+                    <input id="mobile" type="number" class="input" placeholder="Mobile No" />
+                    <label class="fieldset-label">Password</label>
+                    <input id="regpassword" type="password" class="input" placeholder="Password" />
+                    <button class="btn btn-neutral mt-4" onclick="register()">Sign Up</button>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+       </section>
+
+
+    </section>
+    <script src="{{url_for ('static', filename='js/login.js')}}"></script>
 </body>
 
 </html>
