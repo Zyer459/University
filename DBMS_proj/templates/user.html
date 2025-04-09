@@ -1,0 +1,132 @@
+{% extends "login.html" %}
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="assets/diagnosis.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/login.css') }}">
+</head>
+<body> -->
+    <!-- Navbar -->
+<!-- toma-->
+    {% block nav %}
+    <nav class="navbar fixed bg-black justify-between">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="white">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0"
+                    class="menu menu-sm text-white dropdown-content bg-slate-500 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                    <li>
+                        <a>Appointment</a>
+                        <ul class="p-2  bg-slate-500">
+                            <li><a>Doctor</a></li>
+                            <li><a>Diagnosis</a></li>
+                        </ul>
+                    </li>
+                    <li><a>About Us</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+            </div>
+            <a class="btn btn-ghost text-xl text-white font-bold">D.A.S</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li>
+                    <details>
+                        <summary class="text-white font-bold">Appointment</summary>
+                        <ul class="p-2">
+                            <li><a class="font-semibold">Doctor</a></li>
+                            <li><a class="font-semibold">Diagnosis</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a class="text-white font-bold">About Us</a></li>
+                <li><a class="text-white font-bold">Contact</a></li>
+            </ul>
+        </div>
+        <div id="log_in" class="navbar-end gap-2 hidden">
+            <a id="backBtn" class="btn rounded-full text-black font-bold" onclick="back()">back</a>
+        </div>
+    </nav>
+    {% endblock %}
+
+    <!-- Starting page -->
+    {% block startpage %}
+    <div id="wlcm" class="min-h-screen flex flex-col justify-center items-center bg-slate-400 wlcom">
+        <div id="select" class="selection mb-5">
+            <div class="hero bg-base-200 rounded-2xl">
+                  <div class="card bg-slate-300 w-full min-w-sm shrink-0 shadow-2xl">
+                    <div class="card-body">
+                      <fieldset class="fieldset flex flex-row justify-evenly">
+                        <a id="signHide" class="btn rounded-full text-black font-bold" onclick="signUp()">Sign up</a>
+                        <a id="logHide" class="btn rounded-full text-black font-bold" onclick="logIn()">Log in</a>
+                      </fieldset>
+                      <a id="backBtn" class="btn rounded-full text-black font-bold" href="/">back</a>
+                    </div>
+                  </div>
+              </div>
+        </div>
+        
+    </div>
+    {% endblock %}
+
+    <!-- Log in section 
+    <section id="login" class="login-section back">
+        <div class="hero bg-transparent min-h-screen">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+              <div class="card bg-base-100 w-96 shrink-0 shadow-2xl">
+                <div class="card-body">
+                  <fieldset class="fieldset">
+                    <label class="fieldset-label">User Name</label>
+                    <input id="email" type="text" class="input" placeholder="Email" />
+                    <label class="fieldset-label">Password</label>
+                    <input id="password" type="password" class="input" placeholder="Password" />
+                    <div><a class="link link-hover">Forgot password?</a></div>
+                    <button class="btn btn-neutral mt-4" onclick="login()">Login</button>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+       </section> -->
+
+       <!-- Sign Up Section 
+       <section id="signup" class="signup-section back">
+        <div class="hero bg-transparent min-h-screen">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+              <div class="card bg-base-100 w-96 shrink-0 shadow-2xl">
+                <div class="card-body">
+                  <fieldset class="fieldset">
+                    <label class="fieldset-label">Email</label>
+                    <input id="email" type="email" class="input" placeholder="Email" />
+                    <label class="fieldset-label">User Name</label>
+                    <input id="name" type="text" class="input" placeholder="Name" />
+                    <label class="fieldset-label">Institute Name</label>
+                    <input id="name" type="text" class="input" placeholder="Name" />
+                    <label class="fieldset-label">Mobile No.</label>
+                    <input id="mobile" type="number" class="input" placeholder="Mobile No" />
+                    <label class="fieldset-label">Password</label>
+                    <input id="password" type="password" class="input" placeholder="Password" />
+                    <button class="btn btn-neutral mt-4" onclick="back()">Sign Up</button>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+       </section> -->
+       {% block userscript %}
+       <script src="{{ url_for('static', filename='js/function.js')}}"></script>
+       <!-- <script src="{{ url_for('static', filename='js/admin-login.js')}}"></script> -->
+       {% endblock %}
+<!--</body>
+</html> -->

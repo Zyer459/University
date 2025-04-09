@@ -1,0 +1,28 @@
+{% extends "dashboard.html" %}
+<!-- razwan -->
+{% block body %}
+<ol>
+    {% for row in show %}
+        <li>serial no: {{ row[0] }}</li>
+        <li>name: {{ row[1] }}</li>
+        <li>price: tk {{ row[2] }}</li>
+        <li>clinic: {{ row[3] }}</li>
+
+        <!-- Delete -->
+        <form action="/adminDiagnosis/delete" method="POST" style="display:inline;">
+            <input type="hidden" name="test_name_del" value="{{ row[1] }}">
+            <input type="hidden" name="clinic_del" value="{{ row[3] }}">
+            <button class="btn btn-outline" type="submit">Delete</button>
+        </form>
+
+        <!-- Update Task -->
+        <form action="/adminDiagnosis/update" method="post" style="display:inline;">
+            <input type="hidden" name="test_name" value="{{ row[1] }}">
+            <input type="hidden" name="clinic" value="{{ row[3] }}">
+            <input type="text" name="new_price" placeholder="New price" required>
+            <button class="btn btn-outline" type="submit">Update</button>
+        </form>
+        <br>
+    {% endfor %}
+</ol>
+{% endblock %}

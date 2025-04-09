@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- ritu -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diagnosis and Appointment System</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="shortcut icon" href="{{ url_for('static' ,filename='images/diagnosis.jpg') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/diagnosis.jpg" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for('static',filename='styles/login.css') }}">
 </head>
 
 <body>
-    {% block nav %}
-    {% endblock %}
-    {% block startpage %}
-    {% endblock %}
-    <!-- <section class="min-h-screen welcome">
+    <section class="min-h-screen welcome">
         <nav class="navbar fixed bg-black justify-between">
             <div class="navbar-start">
                 <div class="dropdown">
@@ -60,19 +54,48 @@
                 </ul>
             </div>
             <div id="log_in" class="navbar-end gap-2">
-                <a class="btn rounded-full text-black font-bold" onclick="signUp()">Sign up</a>
-                <a class="btn rounded-full text-black font-bold" onclick="logIn()">Log in</a>
+                <a id="backBtn" class="btn rounded-full text-black font-bold" onclick="back()">back</a>
             </div>
         </nav>
 
 
-        <div id="wlcm" class="min-h-screen flex justify-center items-center bg-slate-400 wlcom">
-            <h1 class="text-4xl lg:text-9xl text-center text-black font-bold lg:font-extrabold bg-slate-100 pb-10 opacity-80">Welcome To Diagnosis and Appointment System</h1>
-        </div> -->
+        <!-- welcome -->
+        <div id="wlcm" class="min-h-screen flex flex-col justify-center items-center bg-slate-400 wlcom">
+            <!-- <div id="select" class="selection mb-5">
+                <div class="hero bg-base-200 rounded-2xl">
+                      <div class="card bg-slate-300 w-full min-w-sm shrink-0 shadow-2xl">
+                        <div class="card-body">
+                          <fieldset class="fieldset flex flex-row justify-evenly">
+                            <a id="signHide" class="btn rounded-full text-black font-bold" onclick="signUp()">Sign up</a>
+                            <a id="logHide" class="btn rounded-full text-black font-bold" onclick="logIn()">Log in</a>
+                          </fieldset>
+                          <a id="backBtn" class="btn rounded-full text-black font-bold" onclick="rtrn()">back</a>
+                        </div>
+                      </div>
+                  </div>
+            </div> -->
+            <div id="signLogin" class="selection mb-5">
+                <div class="hero bg-base-200 rounded-2xl">
+                      <div class="card bg-slate-300 w-full min-w-sm shrink-0 shadow-2xl">
+                        <div class="card-body">
+                            <h1 class="text-center text-2xl font-bold">Using as</h1>
+                            <hr>
+                          <fieldset class="fieldset flex flex-row justify-evenly">
+                            <button id="admin-link" class="btn btn-soft btn-primary">Admin</button>
+                            <button id="patient-link" class="btn btn-soft btn-success">Patient</button>
+                          </fieldset>
+                          
+                        </div>
+                      </div>
+                  </div>
+            </div>
+            <h1 id="wlcmMsg" class="text-4xl lg:text-8xl text-center text-black font-bold lg:font-extrabold bg-slate-100 pb-5 opacity-80">Welcome To Diagnosis and Appointment System</h1>
+            
+        </div>
 
 
 
-        <!-- Login Section -->
+        <!-- Login Section
        <section id="login" class="login-section back">
         <div class="hero bg-transparent min-h-screen">
             <div class="hero-content flex-col lg:flex-row-reverse">
@@ -90,9 +113,9 @@
               </div>
             </div>
           </div>
-       </section>
+       </section> -->
 
-       <!-- Sign Up Section -->
+       <!-- Sign Up Section 
        <section id="signup" class="signup-section back">
         <div class="hero bg-transparent min-h-screen">
             <div class="hero-content flex-col lg:flex-row-reverse">
@@ -100,26 +123,30 @@
                 <div class="card-body">
                   <fieldset class="fieldset">
                     <label class="fieldset-label">Email</label>
-                    <input id="regemail" type="email" class="input" placeholder="Email" />
+                    <input id="email" type="email" class="input" placeholder="Email" />
                     <label class="fieldset-label">Name</label>
                     <input id="name" type="text" class="input" placeholder="Name" />
                     <label class="fieldset-label">Mobile No.</label>
                     <input id="mobile" type="number" class="input" placeholder="Mobile No" />
                     <label class="fieldset-label">Password</label>
-                    <input id="regpassword" type="password" class="input" placeholder="Password" />
-                    <button class="btn btn-neutral mt-4" onclick="register()">Sign Up</button>
+                    <input id="password" type="password" class="input" placeholder="Password" />
+                    <button class="btn btn-neutral mt-4" onclick="back()">Sign Up</button>
                   </fieldset>
                 </div>
               </div>
             </div>
           </div>
-       </section>
+       </section> -->
 
 
-    <!-- </section> -->
-    <script src="{{url_for ('static', filename='js/login.js')}}"></script>
-    {% block userscript %}
-    {% endblock %}
+       <!-- Admin and Patient select -->
+
+
+    </section>
+
+        
+      <script src="{{ url_for('static', filename='js/index.js')}}"></script>
+      <script src="{{ url_for('static', filename='js/function.js')}}"></script>
 </body>
 
 </html>

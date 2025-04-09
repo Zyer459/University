@@ -1,0 +1,15 @@
+{% extends "dashboard.html" %}
+<!-- razwan -->
+{% block body %}
+<form action='/adminDiagnosis/create' method='post'>
+	<input class="input" name="testname" type="text" autocomplete="off" placeholder="Test Name" type="text">
+    <input class="input" name="price" type="text" autocomplete="off" placeholder="Test Price" type="text">
+    <input class="input" name="clinic_id" type="text" autocomplete="off" placeholder="Clinic id" type="text">
+	<button class="btn btn-outline" type="submit">Create</button>
+</form>
+
+<form action='/adminDiagnosis/read' method="post">
+    <input class="input" name="show" type="text" autocomplete="off" placeholder="Clinic id">
+    <button type="submit" class="btn btn-outline">Show all</button>
+</form>
+{% endblock %}

@@ -21,9 +21,10 @@
 
 }
 */
-document.getElementById("login").classList.add("hidden");
-document.getElementById("signup").classList.add("hidden");
+//document.getElementById("login").classList.add("hidden");
+//document.getElementById("signup").classList.add("hidden");
 function login() {
+    let currentURL = window.location.href;
     const password = document.getElementById("password").value;
     const email = document.getElementById("email").value;
     const specialChars = "._-+@";
@@ -39,12 +40,13 @@ function login() {
         url: '/login',
         type: 'POST',
         contentType: 'application/json',
-        data: JSON.stringify({ password: password, email: email }),
+        data: JSON.stringify({ password: password, email: email, url: currentURL}),
         success: function (response) {
             console.log(response.result);
             if (response.result === '200') {
             	// Redirect to the home page if login is successful
             	alert('Successfully logged in');
+                //alert(currentURL);
             	window.location.href = response.redirect; //changes the URL in browser window
             }
             else if (response.result === '404') {
@@ -58,6 +60,7 @@ function login() {
 }
 
 function register() {
+    let currentURL = window.location.href;
     const email = document.getElementById("regemail").value;
     const name = document.getElementById("name").value;
     const mobile = document.getElementById("mobile").value;
@@ -71,18 +74,17 @@ function register() {
         alert("Please put a valid email")
         return;
     }
-    console.log(email)
-    console.log('reg ok')
     $.ajax({
         url: '/register',
         type: 'POST',
         contentType: 'application/json',
-        data: JSON.stringify({ password: password, email: email, name: name, mobile: mobile}),
+        data: JSON.stringify({ password: password, email: email, name: name, mobile: mobile, url: currentURL}),
         success: function (response) {
             console.log(response.result);
             if (response.result === '200') {
             	// Redirect to the login page if registration successful
             	alert('Registration successful');
+                //alert(currentURL);
             	window.location.href = response.redirect; //changes the URL in browser window
             }
             else if (response.result === '404') {
@@ -95,8 +97,8 @@ function register() {
     });
 }
 
-const signUp = () => {
-    document.getElementById("log_in").classList.add("hidden");
+/*const signUp = () => {
+    document.getElementById("log_in").classList.add("hidden"); //solved: clash with function.js
     document.getElementById("wlcm").classList.add("hidden");
     document.getElementById("signup").classList.remove("hidden");
 }
@@ -106,4 +108,4 @@ const logIn = () => {
     document.getElementById("wlcm").classList.add("hidden");
     document.getElementById("login").classList.remove("hidden");
     document.getElementById("signup").classList.add("hidden");
-}
+}*/

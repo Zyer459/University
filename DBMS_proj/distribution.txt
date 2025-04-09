@@ -1,0 +1,5 @@
+index.html -> ritu
+layout.html -> shakil
+admin, patient, user -> toma
+admin-diagnosis.html, admin-html-show, database.py -> razwan
+app.py, verify.py, login.js -> asif

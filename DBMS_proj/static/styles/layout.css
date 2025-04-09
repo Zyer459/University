@@ -1,0 +1,31 @@
+.back{
+    background-image: url(../images/resource-25-most-common-diagnosis.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.wlcom{
+    background-image: url(../images/Stroke-Diagnosis-MRI.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.buttons-container {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+justify-content: center;
+}
+
+/*button {
+padding: 10px 15px;
+font-size: 16px;
+background-color: #4CAF50;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}*/
+
+button:hover {
+background-color: #45a049;
+}

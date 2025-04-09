@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- shakil -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diagnosis and Appointment System</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="shortcut icon" href="{{ url_for('static', filename='images/diagnosis.jpg') }}" type="image/x-icon">
-    <link rel="stylesheet" href="{{ url_for('static',filename='styles/layout.css') }}">
+    <link rel="shortcut icon" href="assets/diagnosis.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
 </head>
 
 <body>
@@ -28,7 +28,7 @@
                         <a>Appointment</a>
                         <ul class="p-2">
                             <li><a>Doctor</a></li>
-                            <li><a href = "diagnosis.html">Diagnosis</a></li>
+                            <li><a>Diagnosis</a></li>
                         </ul>
                     </li>
                     <li><a>About Us</a></li>
@@ -41,10 +41,10 @@
             <ul class="menu menu-horizontal px-1">
                 <li>
                     <details>
-                        <summary class="text-black font-bold">Appointment</summary>
+                        <summary class="text-black font-bold">Manage</summary>
                         <ul class="p-2">
                             <li><a href="{{ url_for('doctor') }}" >Doctor</a></li>
-                            <li><a href="{{ url_for('diagnosis') }}" >Diagnosis</a></li>
+                            <li><a href="{{ url_for('adminDiagnosis') }}" >Diagnosis</a></li>
                         </ul>
                     </details>
                 </li>
@@ -52,27 +52,21 @@
                 <li><a class="text-black font-bold" href="{{ url_for('contact') }}">Contact</a></li>
             </ul>
         </div>
-        <!-- <div class="navbar-end">
-            <a class="btn rounded-full text-white font-bold">DP</a>
-        </div> -->
         <div id="log_in" class="navbar-end gap-2">
             <a id="logOut" class="btn rounded-full text-black font-bold">Log out</a>
         </div>
         <script src="{{ url_for('static', filename='js/logout.js' ) }}"></script>
     </nav>
     {% block img %}{% endblock %}
-    <section>
-        {% block body %}
-        {% endblock %}
-    </section>
-    <script src="{{ url_for('static', filename='js/button.js' ) }}"></script>
-    <!-- <br>
+    <br>
+    <br>
     <br>
     <br>
     <br>
     <div>
-        <script src="{{ url_for('static', filename='js/button.js' ) }}"></script>
-  	</div> -->
+    	{% block body %}
+  		{% endblock %}
+  	</div>
 </body>
 
 </html>
